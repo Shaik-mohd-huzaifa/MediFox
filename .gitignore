@@ -1,0 +1,128 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Environments
+.env
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Python build artifacts
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# FastAPI & OpenAI related
+logs/
+*.log
+*.sqlite
+*.db
+
+# React (node/npm artifacts)
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log*
+pnpm-debug.log
+build/
+dist/
+.cache/
+.parcel-cache/
+.npm
+.yarn-integrity
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+coverage/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+.settings/
+*.tmproj
+*.esproj
+nbproject/
+*.iml
+*.iws
+*.ipr
+.vs/
+.history/
+
+# Voice agent specific
+*.wav
+*.mp3
+*.webm
+*.ogg
+*.flac
+*.aac
+temp/
+tmp/
+.temp/
+.tmp/
+
+# Eka Healthcare specific
+eka-credentials.json
+eka-connect-token.json
+patient-data/
+medical-records/
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+
+# Pytest artifacts
+.pytest_cache/
+
+# Docker artifacts
+*.tar
+*.tar.gz
+docker-compose.override.yml
+
+# Miscellaneous
+*.pem
+*.crt
+*.key

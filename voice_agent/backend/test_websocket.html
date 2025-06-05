@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket Test</title>
+</head>
+<body>
+    <h1>WebSocket Connection Test</h1>
+    <button id="connectBtn">Connect WebSocket</button>
+    <button id="disconnectBtn" disabled>Disconnect</button>
+    <div id="status">Status: Disconnected</div>
+    <div id="log" style="margin-top: 20px; border: 1px solid #ccc; padding: 10px; height: 300px; overflow-y: scroll;"></div>
+
+    <script>
+        let socket = null;
+        const statusDiv = document.getElementById('status');
+        const logDiv = document.getElementById('log');
+        const connectBtn = document.getElementById('connectBtn');
+        const disconnectBtn = document.getElementById('disconnectBtn');
+
+        function log(message) {
+            const entry = document.createElement('div');
+            entry.textContent = `${new Date().toISOString()}: ${message}`;
+            logDiv.appendChild(entry);
+            logDiv.scrollTop = logDiv.scrollHeight;
+        }
+
+        connectBtn.addEventListener('click', () => {
+            try {
+                const wsUrl = 'ws://127.0.0.1:8000/ws/voice-chat';
+                log(`Attempting to connect to ${wsUrl}`);
+                socket = new WebSocket(wsUrl);
+                socket.binaryType = 'blob';
+
+                socket.onopen = (event) => {
+                    log('Connection opened successfully!');
+                    statusDiv.textContent = 'Status: Connected';
+                    connectBtn.disabled = true;
+                    disconnectBtn.disabled = false;
+                };
+
+                socket.onclose = (event) => {
+                    log(`Connection closed. Code: ${event.code}, Reason: ${event.reason}`);
+                    statusDiv.textContent = 'Status: Disconnected';
+                    connectBtn.disabled = false;
+                    disconnectBtn.disabled = true;
+                };
+
+                socket.onerror = (error) => {
+                    log('WebSocket error occurred');
+                    console.error('WebSocket error:', error);
+                };
+
+                socket.onmessage = (event) => {
+                    if (typeof event.data === 'string') {
+                        log(`Received message: ${event.data}`);
+                    } else {
+                        log('Received binary data');
+                    }
+                };
+            } catch (err) {
+                log(`Error creating connection: ${err.message}`);
+                console.error('Connection error:', err);
+            }
+        });
+
+        disconnectBtn.addEventListener('click', () => {
+            if (socket) {
+                log('Closing connection...');
+                socket.close();
+                socket = null;
+            }
+        });
+
+        // Log browser information
+        log(`Browser: ${navigator.userAgent}`);
+        log(`Protocol: ${window.location.protocol}`);
+        log('Page loaded. Click "Connect WebSocket" to test connection.');
+    </script>
+</body>
+</html>
