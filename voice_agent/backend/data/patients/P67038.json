@@ -1,0 +1,28 @@
+{
+  "id": "P67038",
+  "eka_care_id": "EKA219401",
+  "first_name": "Amit",
+  "last_name": "Reddy",
+  "full_name": "Amit Reddy",
+  "gender": "female",
+  "date_of_birth": "1969-03-06",
+  "age": 56,
+  "blood_group": "A-",
+  "allergies": "Dairy",
+  "health_conditions": "Hypertension",
+  "phone_number": "6261067038",
+  "email": "amit.reddy@example.com",
+  "address": {
+    "street": "12 Example Street",
+    "city": "Surat",
+    "state": "Gujarat",
+    "postal_code": "329044"
+  },
+  "emergency_contact": {
+    "name": "Arjun Reddy",
+    "relationship": "Parent",
+    "phone": "7243358305"
+  },
+  "created_at": "2025-06-06T07:31:22.365264",
+  "updated_at": "2025-06-06T07:31:22.365265"
+}

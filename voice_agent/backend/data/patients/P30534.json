@@ -1,0 +1,27 @@
+{
+  "id": "P30534",
+  "first_name": "Sunita",
+  "last_name": "Singh",
+  "full_name": "Sunita Singh",
+  "gender": "male",
+  "date_of_birth": "1991-03-03",
+  "age": 34,
+  "blood_group": "A-",
+  "allergies": "None",
+  "health_conditions": "None",
+  "phone_number": "7935330534",
+  "email": "sunita.singh@example.com",
+  "address": {
+    "street": "49 Example Street",
+    "city": "Bangalore",
+    "state": "Karnataka",
+    "postal_code": "949063"
+  },
+  "emergency_contact": {
+    "name": "Raj Singh",
+    "relationship": "Spouse",
+    "phone": "6291013063"
+  },
+  "created_at": "2025-06-06T07:27:46.185325",
+  "updated_at": "2025-06-06T07:27:46.185332"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "P36227",
+  "first_name": "Meera",
+  "last_name": "Singh",
+  "full_name": "Meera Singh",
+  "gender": "male",
+  "date_of_birth": "1996-11-21",
+  "age": 28,
+  "blood_group": "AB-",
+  "allergies": "Tree nuts",
+  "health_conditions": "Anemia",
+  "phone_number": "8229136227",
+  "email": "meera.singh@example.com",
+  "address": {
+    "street": "23 Example Street",
+    "city": "Kanpur",
+    "state": "Maharashtra",
+    "postal_code": "839431"
+  },
+  "emergency_contact": {
+    "name": "Amit Singh",
+    "relationship": "Sibling",
+    "phone": "9542086364"
+  },
+  "created_at": "2025-06-06T07:27:46.193097",
+  "updated_at": "2025-06-06T07:27:46.193105"
+}

@@ -1,0 +1,45 @@
+{
+  "patient_id": "P37534",
+  "updated_at": "2025-06-06T07:31:22.365665",
+  "appointments": [
+    {
+      "id": "APPT74637",
+      "eka_id": "EKA-APPT-36308",
+      "doctor_id": "DOC123",
+      "doctor_name": "Dr. Ravi Sharma",
+      "specialty": "General Physician",
+      "datetime": "2025-06-18T16:30:22.365650",
+      "status": "scheduled",
+      "reason": "Consultation",
+      "notes": "This is a sample appointment for demo purposes.",
+      "created_at": "2025-06-08T16:30:22.365650",
+      "updated_at": "2025-06-06T07:31:22.365650"
+    },
+    {
+      "id": "APPT49878",
+      "eka_id": "EKA-APPT-18300",
+      "doctor_id": "DOC789",
+      "doctor_name": "Dr. Vikram Mehta",
+      "specialty": "Dermatologist",
+      "datetime": "2025-06-13T14:45:22.365650",
+      "status": "scheduled",
+      "reason": "Consultation",
+      "notes": "This is a sample appointment for demo purposes.",
+      "created_at": "2025-06-07T14:45:22.365650",
+      "updated_at": "2025-06-06T07:31:22.365650"
+    },
+    {
+      "id": "APPT45838",
+      "eka_id": "EKA-APPT-99557",
+      "doctor_id": "DOC789",
+      "doctor_name": "Dr. Vikram Mehta",
+      "specialty": "Dermatologist",
+      "datetime": "2025-06-15T16:15:22.365650",
+      "status": "scheduled",
+      "reason": "Follow-up",
+      "notes": "This is a sample appointment for demo purposes.",
+      "created_at": "2025-06-14T16:15:22.365650",
+      "updated_at": "2025-06-06T07:31:22.365650"
+    }
+  ]
+}

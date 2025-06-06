@@ -1,0 +1,28 @@
+{
+  "id": "P13215",
+  "eka_care_id": "EKA751294",
+  "first_name": "Arjun",
+  "last_name": "Agarwal",
+  "full_name": "Arjun Agarwal",
+  "gender": "female",
+  "date_of_birth": "1962-11-23",
+  "age": 62,
+  "blood_group": "O+",
+  "allergies": "Shellfish",
+  "health_conditions": "Diabetes",
+  "phone_number": "6534813215",
+  "email": "arjun.agarwal@example.com",
+  "address": {
+    "street": "52 Example Street",
+    "city": "Delhi",
+    "state": "Maharashtra",
+    "postal_code": "677034"
+  },
+  "emergency_contact": {
+    "name": "Arjun Agarwal",
+    "relationship": "Child",
+    "phone": "8350161419"
+  },
+  "created_at": "2025-06-06T07:31:22.364877",
+  "updated_at": "2025-06-06T07:31:22.364879"
+}

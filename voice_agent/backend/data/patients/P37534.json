@@ -1,0 +1,28 @@
+{
+  "id": "P37534",
+  "eka_care_id": "EKA405452",
+  "first_name": "Amit",
+  "last_name": "Mehta",
+  "full_name": "Amit Mehta",
+  "gender": "male",
+  "date_of_birth": "1991-04-04",
+  "age": 34,
+  "blood_group": "AB-",
+  "allergies": "Peanuts",
+  "health_conditions": "Diabetes",
+  "phone_number": "9186737534",
+  "email": "amit.mehta@example.com",
+  "address": {
+    "street": "54 Example Street",
+    "city": "Delhi",
+    "state": "West Bengal",
+    "postal_code": "545885"
+  },
+  "emergency_contact": {
+    "name": "Rahul Mehta",
+    "relationship": "Sibling",
+    "phone": "8438628442"
+  },
+  "created_at": "2025-06-06T07:31:22.365531",
+  "updated_at": "2025-06-06T07:31:22.365532"
+}

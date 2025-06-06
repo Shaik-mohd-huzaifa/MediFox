@@ -1,0 +1,28 @@
+{
+  "id": "P82197",
+  "eka_care_id": "EKA185435",
+  "first_name": "Arjun",
+  "last_name": "Desai",
+  "full_name": "Arjun Desai",
+  "gender": "female",
+  "date_of_birth": "1987-07-12",
+  "age": 37,
+  "blood_group": "A+",
+  "allergies": "Soy",
+  "health_conditions": "Thyroid disorder",
+  "phone_number": "6700882197",
+  "email": "arjun.desai@example.com",
+  "address": {
+    "street": "88 Example Street",
+    "city": "Chennai",
+    "state": "Uttar Pradesh",
+    "postal_code": "678721"
+  },
+  "emergency_contact": {
+    "name": "Lakshmi Desai",
+    "relationship": "Child",
+    "phone": "8909504257"
+  },
+  "created_at": "2025-06-06T07:30:57.646645",
+  "updated_at": "2025-06-06T07:30:57.646647"
+}

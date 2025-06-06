@@ -1,0 +1,26 @@
+{
+  "created_at": "2025-06-06T07:31:22.365852",
+  "patients": [
+    {
+      "local_id": "P13215",
+      "eka_id": "EKA751294",
+      "name": "Arjun Agarwal",
+      "phone": "6534813215",
+      "appointments": 1
+    },
+    {
+      "local_id": "P67038",
+      "eka_id": "EKA219401",
+      "name": "Amit Reddy",
+      "phone": "6261067038",
+      "appointments": 3
+    },
+    {
+      "local_id": "P37534",
+      "eka_id": "EKA405452",
+      "name": "Amit Mehta",
+      "phone": "9186737534",
+      "appointments": 3
+    }
+  ]
+}

@@ -2,13 +2,17 @@ import os
 import uuid
 import tempfile
 import asyncio
+import json
 import httpx
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect, Request
 from fastapi.responses import HTMLResponse, FileResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
-from typing import Dict, List
+from typing import Dict, List, Any, Optional
+
+from healthcare_agent import HealthcareAgent
+from memory_manager import MemoryManager
 
 load_dotenv()
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -34,6 +38,10 @@ app.add_middleware(
 
 # In-memory session context (for demo; use Redis for production)
 session_context: Dict[str, List[Dict]] = {}
+
+# Initialize healthcare agent
+healthcare_agent = HealthcareAgent()
+memory_manager = MemoryManager()
 
 # --- Helper Functions ---
 async def transcribe_with_whisper_api(audio_path: str) -> str:
@@ -85,20 +93,14 @@ async def transcribe_with_whisper_api(audio_path: str) -> str:
         # Return error message
         return "[Could not transcribe audio - check server logs]"
 
-async def gpt4o_response(context: List[Dict], whisper_text: str) -> str:
-    url = "https://api.openai.com/v1/chat/completions"
-    headers = {"Authorization": f"Bearer {OPENAI_API_KEY}", "Content-Type": "application/json"}
-    messages = context + [{"role": "user", "content": whisper_text}]
-    payload = {
-        "model": "gpt-4o",
-        "messages": messages,
-        "max_tokens": 512,
-        "temperature": 0.7
-    }
-    async with httpx.AsyncClient() as client:
-        resp = await client.post(url, headers=headers, json=payload)
-        resp.raise_for_status()
-        return resp.json()["choices"][0]["message"]["content"]
+async def process_with_healthcare_agent(session_id: str, whisper_text: str, patient_id: Optional[str] = None) -> tuple[str, Dict[str, Any]]:
+    """Process transcript with healthcare agent and return response with metadata."""
+    response_content, metadata = await healthcare_agent.process_input(
+        user_input=whisper_text,
+        session_id=session_id,
+        patient_id=patient_id
+    )
+    return response_content, metadata
 
 async def elevenlabs_tts(text: str) -> bytes:
     # Use streaming endpoint with specified voice ID
@@ -132,7 +134,7 @@ async def elevenlabs_tts(text: str) -> bytes:
 async def voice_chat_ws(websocket: WebSocket):
     await websocket.accept()
     session_id = str(uuid.uuid4())
-    session_context[session_id] = []
+    patient_id = None  # Default to no patient context unless specified
     is_speaking = False  # Track if the AI is currently speaking
     try:
         while True:
@@ -153,6 +155,12 @@ async def voice_chat_ws(websocket: WebSocket):
                     print("Received PAUSE_PROCESSING signal - will process audio but keep connection open")
                     # The next message should be the audio blob
                     # We'll handle it in the regular flow, but remember it's a pause
+                    continue
+                elif text_msg.startswith("SET_PATIENT_ID:"):
+                    # Set patient context for the session
+                    patient_id = text_msg.replace("SET_PATIENT_ID:", "").strip()
+                    print(f"Setting patient context to ID: {patient_id}")
+                    await websocket.send_text(f"[Status] PATIENT_CONTEXT_SET:{patient_id}")
                     continue
                 # Ignore other text messages here
                 continue
@@ -260,13 +268,17 @@ async def voice_chat_ws(websocket: WebSocket):
                     print(f"Skipping processing for empty/short input: '{transcript}'")
                 continue
 
-            # 2. GPT-4o mini for chat response
-            context = session_context[session_id]
-            ai_response = await gpt4o_response(context, transcript)
+            # 2. Process with healthcare agent
+            ai_response, metadata = await process_with_healthcare_agent(session_id, transcript, patient_id)
             await websocket.send_text(f"[AI] {ai_response}")
-            # Update context
-            session_context[session_id].append({"role": "user", "content": transcript})
-            session_context[session_id].append({"role": "assistant", "content": ai_response})
+            
+            # If there were tool calls, send them to the frontend as well
+            if metadata.get("tool_calls"):
+                tool_data = {
+                    "tool_calls": metadata["tool_calls"],
+                    "tool_results": metadata.get("tool_results", [])
+                }
+                await websocket.send_text(f"[Tool_Data] {json.dumps(tool_data)}")
 
             # Set speaking flag to prevent processing audio during playback
             is_speaking = True
@@ -297,4 +309,5 @@ async def voice_chat_ws(websocket: WebSocket):
             # Otherwise, wait for frontend to confirm playback done before next utterance
 
     except WebSocketDisconnect:
-        del session_context[session_id]
+        # Save memory for future sessions
+        print(f"WebSocket disconnected for session {session_id}")

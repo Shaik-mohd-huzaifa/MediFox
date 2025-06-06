@@ -1,0 +1,32 @@
+{
+  "patient_id": "P66168",
+  "updated_at": "2025-06-06T07:30:57.647283",
+  "appointments": [
+    {
+      "id": "APPT79715",
+      "eka_id": "EKA-APPT-15134",
+      "doctor_id": "DOC123",
+      "doctor_name": "Dr. Ravi Sharma",
+      "specialty": "General Physician",
+      "datetime": "2025-05-29T16:30:57.647262",
+      "status": "cancelled",
+      "reason": "Vaccination",
+      "notes": "This is a sample appointment for demo purposes.",
+      "created_at": "2025-05-27T16:30:57.647262",
+      "updated_at": "2025-06-06T07:30:57.647262"
+    },
+    {
+      "id": "APPT91211",
+      "eka_id": "EKA-APPT-17098",
+      "doctor_id": "DOC123",
+      "doctor_name": "Dr. Ravi Sharma",
+      "specialty": "General Physician",
+      "datetime": "2025-06-01T14:45:57.647262",
+      "status": "no-show",
+      "reason": "Consultation",
+      "notes": "This is a sample appointment for demo purposes.",
+      "created_at": "2025-05-31T14:45:57.647262",
+      "updated_at": "2025-06-06T07:30:57.647262"
+    }
+  ]
+}

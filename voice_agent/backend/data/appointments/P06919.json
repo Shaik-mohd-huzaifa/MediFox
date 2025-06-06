@@ -1,0 +1,19 @@
+{
+  "patient_id": "P06919",
+  "updated_at": "2025-06-06T07:30:57.646416",
+  "appointments": [
+    {
+      "id": "APPT29472",
+      "eka_id": "EKA-APPT-15780",
+      "doctor_id": "DOC567",
+      "doctor_name": "Dr. Prakash Iyer",
+      "specialty": "Orthopedic",
+      "datetime": "2025-05-16T14:30:57.646393",
+      "status": "cancelled",
+      "reason": "Regular checkup",
+      "notes": "This is a sample appointment for demo purposes.",
+      "created_at": "2025-05-14T14:30:57.646393",
+      "updated_at": "2025-06-06T07:30:57.646393"
+    }
+  ]
+}

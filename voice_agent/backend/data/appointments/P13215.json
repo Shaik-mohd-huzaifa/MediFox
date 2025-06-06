@@ -1,0 +1,19 @@
+{
+  "patient_id": "P13215",
+  "updated_at": "2025-06-06T07:31:22.365136",
+  "appointments": [
+    {
+      "id": "APPT41142",
+      "eka_id": "EKA-APPT-53294",
+      "doctor_id": "DOC456",
+      "doctor_name": "Dr. Sunita Patel",
+      "specialty": "Cardiologist",
+      "datetime": "2025-06-14T16:30:22.365124",
+      "status": "scheduled",
+      "reason": "Regular checkup",
+      "notes": "This is a sample appointment for demo purposes.",
+      "created_at": "2025-06-05T16:30:22.365124",
+      "updated_at": "2025-06-06T07:31:22.365124"
+    }
+  ]
+}

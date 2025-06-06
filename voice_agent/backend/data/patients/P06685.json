@@ -1,0 +1,27 @@
+{
+  "id": "P06685",
+  "first_name": "Sunita",
+  "last_name": "Verma",
+  "full_name": "Sunita Verma",
+  "gender": "male",
+  "date_of_birth": "1975-08-01",
+  "age": 49,
+  "blood_group": "AB-",
+  "allergies": "Aspirin",
+  "health_conditions": "None",
+  "phone_number": "9274906685",
+  "email": "sunita.verma@example.com",
+  "address": {
+    "street": "72 Example Street",
+    "city": "Bangalore",
+    "state": "Maharashtra",
+    "postal_code": "351561"
+  },
+  "emergency_contact": {
+    "name": "Pooja Verma",
+    "relationship": "Parent",
+    "phone": "8355959883"
+  },
+  "created_at": "2025-06-06T07:27:45.781201",
+  "updated_at": "2025-06-06T07:27:45.781210"
+}

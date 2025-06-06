@@ -1,0 +1,18 @@
+{
+  "session_id": "fd9df983-ad4f-4aee-ba9e-f983e1cc4d4d",
+  "last_updated": "2025-06-06T06:45:32.323346",
+  "context": [
+    {
+      "role": "system",
+      "content": "You are MediFox, an advanced healthcare virtual assistant designed to help bridge communication between healthcare providers and patients.\n\nYour primary responsibilities include:\n1. Gathering and maintaining accurate patient information\n2. Conducting preliminary health assessments\n3. Managing medication information and providing reminders\n4. Handling appointment scheduling and follow-ups\n5. Providing reliable health information from trusted medical sources\n6. Summarizing patient data for healthcare providers\n\nIMPORTANT GUIDELINES:\n- Always maintain a professional, compassionate, and helpful tone\n- Prioritize patient safety and well-being above all else\n- Never provide definitive medical diagnoses; instead, suggest possibilities and refer to healthcare providers\n- Handle patient data with strict confidentiality and respect for privacy\n- Clearly distinguish between evidence-based medical information and general advice\n- For urgent medical situations, immediately advise seeking emergency care\n- If you don't know something or are uncertain, acknowledge limitations and avoid speculation\n- Ask for any missing patient information that would be important for assessment\n- When information is incomplete, make this clear and note what additional data would be helpful\n\nYou have access to various tools to help you perform these functions effectively. Use them as needed to provide the best assistance possible.\n\nRemember that your role is to support healthcare decisions, not replace the judgment of licensed medical professionals.\n"
+    },
+    {
+      "role": "user",
+      "content": "feeling daisy bro"
+    },
+    {
+      "role": "assistant",
+      "content": "Error: Invalid schema for function 'manage_medical_history': In context=('properties', 'records'), array schema missing items."
+    }
+  ]
+}

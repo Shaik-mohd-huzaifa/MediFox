@@ -1,0 +1,123 @@
+{
+  "providers": [
+    {
+      "id": "prov_001",
+      "name": "Dr. Jane Smith",
+      "specialties": [
+        "Family Medicine",
+        "Primary Care"
+      ],
+      "location": {
+        "address": "123 Health Street",
+        "city": "Medville",
+        "state": "CA",
+        "zip": "90210"
+      },
+      "insurance_accepted": [
+        "BlueCross",
+        "Medicare",
+        "Aetna",
+        "UnitedHealth"
+      ],
+      "languages": [
+        "English",
+        "Spanish"
+      ],
+      "accepting_patients": true
+    },
+    {
+      "id": "prov_002",
+      "name": "Dr. Robert Johnson",
+      "specialties": [
+        "Cardiology",
+        "Internal Medicine"
+      ],
+      "location": {
+        "address": "456 Heart Avenue",
+        "city": "Medville",
+        "state": "CA",
+        "zip": "90210"
+      },
+      "insurance_accepted": [
+        "BlueCross",
+        "Medicare",
+        "UnitedHealth"
+      ],
+      "languages": [
+        "English"
+      ],
+      "accepting_patients": true
+    },
+    {
+      "id": "prov_003",
+      "name": "Dr. Sarah Lee",
+      "specialties": [
+        "Dermatology"
+      ],
+      "location": {
+        "address": "789 Skin Road",
+        "city": "Medville",
+        "state": "CA",
+        "zip": "90211"
+      },
+      "insurance_accepted": [
+        "BlueCross",
+        "Medicare",
+        "Cigna"
+      ],
+      "languages": [
+        "English",
+        "Mandarin"
+      ],
+      "accepting_patients": true
+    },
+    {
+      "id": "prov_004",
+      "name": "Dr. Michael Wilson",
+      "specialties": [
+        "Neurology"
+      ],
+      "location": {
+        "address": "101 Brain Lane",
+        "city": "Medville",
+        "state": "CA",
+        "zip": "90212"
+      },
+      "insurance_accepted": [
+        "BlueCross",
+        "Aetna",
+        "UnitedHealth"
+      ],
+      "languages": [
+        "English",
+        "French"
+      ],
+      "accepting_patients": false
+    },
+    {
+      "id": "prov_005",
+      "name": "Dr. Emily Chen",
+      "specialties": [
+        "Pediatrics"
+      ],
+      "location": {
+        "address": "202 Child Drive",
+        "city": "Medville",
+        "state": "CA",
+        "zip": "90210"
+      },
+      "insurance_accepted": [
+        "BlueCross",
+        "Medicare",
+        "Medicaid",
+        "UnitedHealth"
+      ],
+      "languages": [
+        "English",
+        "Mandarin",
+        "Cantonese"
+      ],
+      "accepting_patients": true
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "P64051",
+  "first_name": "Rahul",
+  "last_name": "Chatterjee",
+  "full_name": "Rahul Chatterjee",
+  "gender": "female",
+  "date_of_birth": "1992-01-14",
+  "age": 33,
+  "blood_group": "O-",
+  "allergies": "Latex",
+  "health_conditions": "GERD",
+  "phone_number": "7417864051",
+  "email": "rahul.chatterjee@example.com",
+  "address": {
+    "street": "35 Example Street",
+    "city": "Lucknow",
+    "state": "Uttar Pradesh",
+    "postal_code": "908363"
+  },
+  "emergency_contact": {
+    "name": "Karthik Chatterjee",
+    "relationship": "Child",
+    "phone": "6236003562"
+  },
+  "created_at": "2025-06-06T07:23:02.266715",
+  "updated_at": "2025-06-06T07:23:02.266717",
+  "eka_care_id": "EKA250919"
+}
